@@ -18,18 +18,18 @@ const images = [
 let list = document.querySelector('#gallery');
 
 images.forEach(arr => {
-  let li = document.createElement('li');
-  list.insertAdjacentHTML('afterbegin', li);
-  let img = document.createElement('img');
-  img.src = arr.url;
-  img.alt = arr.alt;
+  list.insertAdjacentHTML('beforeend', '<li><img class=qwe>');
+  let qwe = document.querySelectorAll('.qwe');
 
-  console.log(li);
-
-  // console.log(li);
-
-  // console.log(arr.alt);
+  qwe.src = arr.url;
+  qwe.alt = arr.alt;
+  console.log(qwe);
 });
+
+// let img = document.createElement('img');
+// let li = document.createElement('li');
+// img.src = arr.url;
+// img.alt = arr.alt;
 
 // li.appendChild(img);
 // list.append(li);
