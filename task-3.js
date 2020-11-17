@@ -28,3 +28,4 @@ images.forEach(arr => {
 });
 
 list.setAttribute('style', 'display:flex');
+dada;
