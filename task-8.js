@@ -9,8 +9,8 @@ const createBoxes = amount => {
     let r = Math.floor(Math.random() * 256);
     let g = Math.floor(Math.random() * 256);
     let b = Math.floor(Math.random() * 256);
-
     let c = '#' + r.toString(16) + g.toString(16) + b.toString(16);
+
     boxRef.firstChild.style.height = res + 'px';
     boxRef.firstChild.style.width = res + 'px';
     boxRef.firstChild.style.backgroundColor = c;
