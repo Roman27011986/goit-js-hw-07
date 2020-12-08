@@ -15,16 +15,14 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-let list = document.querySelector('#gallery ');
-
-images.forEach(arr => {
-  list.insertAdjacentHTML('afterbegin', '<li class =items><img class=img >');
-  list.style.display = 'display:flex';
-  let img = document.querySelector('.img');
-  img.src = arr.url;
-  img.alt = arr.alt;
-  img.style.width = '400px';
-  img.style.height = '300px';
+images.forEach(el => {
+  document
+    .querySelector('#gallery ')
+    .insertAdjacentHTML(
+      'beforeend',
+      `<li><img src='${el.url}' alt='${el.alt}'width = '400px' height = '300px' ></li>`,
+    );
 });
+const list = document.querySelector('#gallery ');
 
 list.setAttribute('style', 'display:flex');

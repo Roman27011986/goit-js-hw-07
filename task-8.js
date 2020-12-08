@@ -3,7 +3,7 @@ const boxRef = document.querySelector('#boxes');
 const btn = document.querySelectorAll('#controls button');
 let res = 30;
 
-const createBoxes = amount => {
+function createBoxes(amount) {
   for (let i = 0; i < amount; i += 1) {
     boxRef.insertAdjacentHTML('afterbegin', '<div class=container>');
     let r = Math.floor(Math.random() * 256);
@@ -19,7 +19,7 @@ const createBoxes = amount => {
       boxRef.firstChild.remove();
     });
   }
-};
+}
 controlRef.firstElementChild.addEventListener('input', () => {
   let result = controlRef.firstElementChild.value;
   btn[0].addEventListener('click', () => {
