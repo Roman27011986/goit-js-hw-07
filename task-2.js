@@ -7,8 +7,11 @@ const ingredients = [
   'Приправы',
 ];
 const ul = document.querySelector('#ingredients');
-ingredients.forEach(arr => {
+
+const createCard = card => {
   const li = document.createElement('li');
-  li.textContent = arr;
-  ul.appendChild(li);
-});
+  li.textContent = card;
+  return li;
+};
+const ingredientCard = ingredients.map(product => createCard(product));
+ul.append(...ingredientCard);

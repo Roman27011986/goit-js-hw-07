@@ -15,14 +15,13 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-images.forEach(el => {
-  document
-    .querySelector('#gallery ')
-    .insertAdjacentHTML(
-      'beforeend',
-      `<li><img src='${el.url}' alt='${el.alt}'width = '400px' height = '300px' ></li>`,
-    );
-});
 const list = document.querySelector('#gallery ');
 
+const createImg = ({ url, alt }) => {
+  const li = `<li><img src='${url}' alt='${alt}'width = '400px' height = '300px' ></li>`;
+  return li;
+};
+const imgCard = images.map(img => createImg(img));
+
+list.insertAdjacentHTML('beforeend', imgCard);
 list.setAttribute('style', 'display:flex');
