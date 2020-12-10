@@ -17,11 +17,18 @@ const images = [
 ];
 const list = document.querySelector('#gallery ');
 
-const createImg = ({ url, alt }) => {
-  const li = `<li><img src='${url}' alt='${alt}'width = '400px' height = '300px' ></li>`;
-  return li;
-};
-const imgCard = images.map(img => createImg(img));
+let li = '';
+images.forEach(img => {
+  return (li += `<li><img src='${img.url}' alt='${img.alt}'width = '400px' height = '300px' ></li>`);
+});
 
-list.insertAdjacentHTML('beforeend', imgCard);
+list.insertAdjacentHTML('beforeend', li);
 list.setAttribute('style', 'display:flex');
+// const createImg = ({ url, alt }) => {
+//   const li = `<li><img src='${url}' alt='${alt}'width = '400px' height = '300px' ></li>`;
+//   return li;
+// };
+// const imgCard = images.map(img => createImg(img));
+// console.log(...imgCard);
+// list.insertAdjacentHTML('beforeend', imgCard);
+// list.setAttribute('style', 'display:flex');
